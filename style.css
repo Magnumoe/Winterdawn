@@ -3,6 +3,7 @@
   margin: 0;
 }
 body {
+    /* Primary background color*/
   background: #1b344b url("images/mainbackground.jpg") fixed;
   
 }
@@ -39,9 +40,8 @@ nav:hover {
     list-style-type: none;
 }
 section {
-    height: 50vw;
+    height: 100vh;
     position: relative;
-    border: 1px solid black;
 }
 .section-container {
     background-color:  #1b344b;
@@ -49,15 +49,13 @@ section {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15%;
+    border: 1px solid black;
 }
-.section-container:last-of-type{
-    margin: 0;
-}
+
 .section-item {
     box-sizing: border-box;
     height: 100%;
-    width: 33%;
+    flex: 1;
     padding: 25px;
 }
 section#home img {
@@ -66,12 +64,44 @@ section#home img {
     top: 10%;
     transform: translateX(-50%);
 }
-h1, h2, h3 {
+h2, h3, p, a{
     text-transform: capitalize;
-    color: rgb(255, 255, 255);
+    color:  rgb(230, 255, 255);
 }
 h1 {
     text-align: center;
     padding: 20px;
     font-size: 2em;
+    color: white;
+}
+p {
+    padding-top: 1vh;
+}
+a {
+    text-transform: none;
+}
+.one-third {
+    flex: 33;
+}
+.two-third {
+    flex: 66;
+}
+/* Secondary background color*/
+.secondary-color {
+    background-color: rgb(101, 184, 184);
+}
+
+.secondary-color > *{
+    /* Secondary font color*/
+    color: black;
+}
+footer {
+    height: 30vh;
+}
+footer .section-item {
+    min-width: 33%;
+    height: 50%;
+}
+footer address {
+    text-align: center;
 }
